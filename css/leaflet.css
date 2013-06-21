@@ -1,6 +1,7 @@
 /* required styles */
 
 .legend{
+	float:right;
 	width: 160px;
 	height: 144px;
 	background-color: #fff;
@@ -9,7 +10,7 @@
 	border-radius: 20px 0px 0px 0px;
 	position:absolute;
 	z-index:2000;
-	margin-left: 440px;
+	right:0px;
 	margin-top:430px;
 	padding-left:7px;
 	padding-top:7px;
@@ -48,7 +49,7 @@
 	display:inline-block;
 }
 
-#map { height: 600px; width: 600px; }
+#map { height: 600px; width: 100%; }
 
 .leaflet-map-pane,
 .leaflet-tile,
