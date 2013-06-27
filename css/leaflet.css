@@ -340,9 +340,9 @@
 	        border-radius: 8px;
 	}
 .leaflet-control-layers-toggle {
-	background-image: url(../images/layers.png);
+	/*background-image: url(../images/layers.png);
 	width: 36px;
-	height: 36px;
+	height: 36px;*/
 	}
 .leaflet-touch .leaflet-control-layers-toggle {
 	width: 44px;
@@ -350,7 +350,8 @@
 	}
 .leaflet-control-layers .leaflet-control-layers-list,
 .leaflet-control-layers-expanded .leaflet-control-layers-toggle {
-	display: none;
+	/*display: none;*/
+	padding: 5px 5px 5px 5px;
 	}
 .leaflet-control-layers-expanded .leaflet-control-layers-list {
 	display: block;

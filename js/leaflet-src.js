@@ -7967,7 +7967,7 @@ L.Control.Layers = L.Control.extend({
 		    container = this._container = L.DomUtil.create('div', className);
 
 		//Makes this work on IE10 Touch devices by stopping it from firing a mouseout event when the touch is released
-		container.setAttribute('aria-haspopup', true);
+		//container.setAttribute('aria-haspopup', true);
 
 		if (!L.Browser.touch) {
 			L.DomEvent.disableClickPropagation(container);
@@ -7980,8 +7980,8 @@ L.Control.Layers = L.Control.extend({
 
 		if (this.options.collapsed) {
 			L.DomEvent
-			    .on(container, 'mouseover', this._expand, this)
-			    .on(container, 'mouseout', this._collapse, this);
+			    //.on(container, 'mouseover', this._expand, this)
+			    //.on(container, 'mouseout', this._collapse, this);
 
 			var link = this._layersLink = L.DomUtil.create('a', className + '-toggle', container);
 			link.href = '#';
