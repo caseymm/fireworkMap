@@ -39,12 +39,16 @@ var MarkerGreen = L.icon({
     Duluth = L.marker([34.019123,-84.171624], {icon: MarkerGreen}).bindPopup('<a href="http://www.duluthga.net/whats-happening/calendar-of-events/#action=ai1ec_month&ai1ec_month_offset=1&ai1ec_post_ids=" target="_blank"><b>Duluth Celebrates America</b></a> <br /><br /> Scott Hudgens Park - <br /> River Green Business Park,  <br /> River Green Parkway, Duluth<br /><br /> 4 p.m. July 3. Free.')
     Norcross = L.marker([33.941081,-84.211321], {icon: MarkerGreen}).bindPopup('<a href="http://www.norcrossga.net/events/event-profile.php?Event_ID=1862" target="_blank"><b>Independence Day Celebration <br /> and Mother&#39;s Finest Concert</b></a> <br /><br /> Lillian Webb Park <br /> 5 College St., Norcross<br /><br /> 4 p.m. July 3. Free.')
     Villa = L.marker([33.689049,-84.946675], {icon: MarkerGreen}).bindPopup('<a href="http://www.villaricaparks.com/PDFs/homepage/vr.pg09.pdf" target="_blank"><b>Villa Rica Fireworks Extravaganza</b></a> <br /><br /> The V-plex <br /> 1605 Highway 61, Villa Rica<br /><br /> 5 p.m. July 3. Free.')
-    Kennesaw = L.marker([34.040463,-84.603975], {icon: MarkerYellow}).bindPopup('<a href="www.kennesawjuly3.com" target="_blank"><b>City of Kennesaw&#39;s Salute to America</b></a> <br /><br /> Kennesaw Historic Train Depot <br /> 2828 Cherokee St. NW, Kennesaw<br /><br /> 6-10 p.m. July 3. Free. <br /> Tables can be reserved near the stage for $75')
+    Kennesaw = L.marker([34.040463,-84.603975], {icon: MarkerYellow}).bindPopup('<a href="www.kennesawjuly3.com" target="_blank"><b>City of Kennesaw&#39;s Salute to America</b></a> <br /><br /> Kennesaw Historic Train Depot <br /> 2828 Cherokee St. NW, Kennesaw<br /><br /> <b>Postponed: Date to be Determined. </b> Free. <br /> Tables can be reserved near the stage for $75')
     Roswell = L.marker([34.062899,-84.381459], {icon: MarkerGreen}).bindPopup('<a href="http://www.roswellgov.com/Calendar.aspx?EID=3856" target="_blank"><b>14th Annual July 4th <br /> Fireworks Extravanganza</b></a> <br /><br /> Roswell High School <br /> 11595 King Road, Roswell<br /><br /> 5:30 p.m. July 4. Fireworks at dusk. Free. <br /> ')
+    
+    Sugar = L.marker([34.097378,-84.042985], {icon: MarkerGreen}).bindPopup('<a href="http://www.cityofsugarhill.com/" target="_blank"><b>Sparks in the Park</b></a> <br /><br /> E.E. Robinson Park <br /> 850 Level Creek Rd  <br /> Sugar Hill<br /><br /> 6:30 p.m. August 3. Free.')
 	
 var july4 = L.layerGroup([Olympic, Aquarium, Lenox, Mall, Alpharetta, Braves, Marietta, Stone, Nash, East, Speedway, Lilburn, Woodstock, Roswell]);
 
-var july3 = L.layerGroup([Duluth, Norcross, Villa, Kennesaw]);
+var july3 = L.layerGroup([Duluth, Norcross, Villa]);
+
+var postponed = L.layerGroup([Sugar, Kennesaw]);
     
 var cmAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
     cmUrl = 'http://{s}.tile.cloudmade.com/825c6664ffdf4e619e51fb7dd3b47005/100064/256/{z}/{x}/{y}.png';
@@ -54,7 +58,7 @@ var regular   = L.tileLayer(cmUrl, {styleId: 100064, attribution: cmAttr});
 		var map = L.map('map', {
 			center: new L.LatLng(33.801974,-84.296722),
 			zoom: 9,
-			layers: [regular, july3, july4],
+			layers: [regular, july3, july4, postponed],
 		});
 
 
@@ -69,6 +73,7 @@ var overlayMaps = {
     
     "Events on July 3rd": july3,
     "Events on July 4th": july4,
+    "Postponed Events": postponed
     //"All scheduled new libraries": all
 };
 
